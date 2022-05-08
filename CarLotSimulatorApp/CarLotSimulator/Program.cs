@@ -18,6 +18,40 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            var monisCar = new Car();
+            monisCar.Make = "Chevy";
+            monisCar.Model = "Equinox";
+            monisCar.Year = 2016;
+            monisCar.EngineNoise = "Vroom!!";
+            monisCar.HonkNoise = "Beep beep!!";
+            monisCar.IsDriveable = true;
+
+            var snakesCar = new Car();
+            snakesCar.Make = "Honda";
+            snakesCar.Model = "Civic";
+            snakesCar.Year = 2022;
+            snakesCar.EngineNoise = "Nyoom!";
+            snakesCar.HonkNoise = "Beep!!";
+            snakesCar.IsDriveable = true;
+
+            var audreysCar = new Car();
+            audreysCar.Make = "Little Tikes";
+            audreysCar.Model = "Cozy Coupe";
+            audreysCar.Year = 1979;
+            audreysCar.EngineNoise = "*audible childs play noise*";
+            audreysCar.HonkNoise = "HONK!!!";
+            audreysCar.IsDriveable = false;
+
+            DisplayNoise(monisCar);
+            Console.WriteLine("------------");
+            DisplayNoise(snakesCar);
+            Console.WriteLine("------------");
+            DisplayNoise(audreysCar);
+            Console.WriteLine("------------");
+
+
+
+
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
@@ -29,5 +63,11 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
         }
+        public static void DisplayNoise(CarLotSimulator.Car car)
+        {
+            Console.WriteLine($"The {car.Make} {car.Model}'s engine sounds like {car.EngineNoise} " +
+                $"and the horn sounds like {car.HonkNoise}!");
+        }
     }
+    
 }
