@@ -72,9 +72,12 @@ namespace CarLotSimulator
             DisplayNoise(audreysCar);
             Console.WriteLine("------------");
 
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars}");
+
+
             foreach (var car in carLot)
             {
-                Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
+                Console.WriteLine($"{car.Year} {car.Make} {car.Model} {car.EngineNoise} {car.HonkNoise}");
             }
         }
         public static void DisplayNoise(CarLotSimulator.Car car)
